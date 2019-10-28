@@ -1,7 +1,7 @@
 <template>
-  <origin-picker-view indicator-style="height: 72rpx;" style="height: {{height}}rpx;" value="{{value}}" onChange="bindChange">
+  <origin-picker-view  value="{{value}}" onChange="bindChange">
     <origin-picker-view-column>
-      <view c-for="{{list}}" style="line-height: 72rpx; align-items:center">
+      <view c-for="{{list}}" style="align-items:center">
         <text style="{{computedItemStyle}}">{{item}}</text>
       </view>
     </origin-picker-view-column>
@@ -9,6 +9,7 @@
 </template>
 <script>
  class CPickerItem implements CPickerItemInterface {
+   // line-height: 72rpx; align-items:center
     props = {
       list: {
         type: Array,
